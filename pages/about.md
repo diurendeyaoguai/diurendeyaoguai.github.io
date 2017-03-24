@@ -1,18 +1,18 @@
 ---
 layout: page
 title: About
-description: 打码改变世界
-keywords: Zhuang Ma, 马壮
+description: 妖怪，也很无奈
+keywords: Shun Zhang, 张顺
 comments: true
 menu: 关于
 permalink: /about/
 ---
 
-我是马壮，码而生，码而立。
+睡着的时候，一定要多做些梦。
 
-仰慕「优雅编码的艺术」。
+因为一生很短，
 
-坚信熟能生巧，努力改变人生。
+偏偏欲望又那么长。
 
 ## 联系
 
