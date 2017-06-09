@@ -8,8 +8,7 @@ keywords: WebView
 
 ## 需求
 
-项目里有一个需求，需要使用h5调起本地图库和拍照。我给出的经验是使用jsbridge，通过js调用本地方法然后回传数据的方案。h5那边说是已经做完了，需要使用系统的方法来搞，好吧。。。
-这样你们倒是简单极了
+项目里有一个需求，需要使用h5调起本地图库和拍照。我给出的经验是使用jsbridge，通过js调用本地方法然后回传数据的方案。h5那边说是已经做完了，需要使用系统的方法来搞，好吧。。。这样你们倒是简单极了
 
 ```html
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
@@ -299,9 +298,16 @@ getPath()方法
 ```
 是的，这样就完成了。	
 
+proguard文件
+-keepclassmembers class * extends android.webkit.WebChromeClient {
+     public void openFileChooser(...);
+     public boolean onShowFileChooser(...);
+}
+
 ## 实现
 解决方法
 
 1，android提供方法给js调用，选择图片、上传图片在android本地完成。
+
 2，复写openFileChooser和onShowFileChooser方法
 
