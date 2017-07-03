@@ -18,10 +18,9 @@ var b:String? = "b"  b = null//这样就不会报错了
 但是如果调用b.length编译会不通过，因为b可能为空。但是我们还是会必须访问b的变量的吧，在实际开发中
 那么，将有以下几种方法做到
 **1，手动判断**
+
 val length = if(b!=null) b.length else -1;
-
 或者
-
 if (b != null && b.length > 0) {
     print("String of length ${b.length}")
 } else {
@@ -29,7 +28,7 @@ if (b != null && b.length > 0) {
 }
 请注意，这只适用于 b 是不可变的情况（即在检查和使用之间没有修改过的局部变量 ，或者不可覆盖并且有幕后字段的 val 成员），因为否则可能会发生在检查之后 b 又变为 null 的情况。
 
-**2，操作符?. **   
+**2，操作符?.**   
 b?.length 如果b为null那直接返回null，如果b不为null则返回length
 kotlin文档里有这么个案例特别有意思：
 安全调用在链式调用中很有用。例如，如果一个员工 Bob 可能会（或者不会）分配给一个部门， 并且可能有另外一个员工是该部门的负责人，那么获取 Bob 所在部门负责人（如果有的话）的名字，我们写作：
@@ -43,7 +42,7 @@ bob?.department?.head?.name
 var b:String? = "b"
 b?.let{ print(b)}
 
-**操作符Elvis（猫王？哈哈）    ?: **
+**操作符Elvis（猫王？哈哈）    ?:**
 可以说kotlin的操作符一上来就给我干懵了
 val l = b?.length?:-1 //这句话的意思跟val l = if(b!=null) b.length else -1一个意思
 ?:意思其实是如果前面的表达式为null则结果为右侧的值，否则返回表达式的值
