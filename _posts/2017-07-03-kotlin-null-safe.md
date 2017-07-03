@@ -6,7 +6,8 @@ description: 修复Picasso Target问题
 keywords: Picasso
 ---
 
-## 一，var val区别  
+## 一，var val区别 
+
 var 变量  val 常量（java中的final）
 
 ## 二，空安全的问题
