@@ -1,9 +1,9 @@
 ﻿---
 layout: post
-title: Picasso Target第一次不调用onBitmapLoaded问题
-categories: Picasso
-description: 修复Picasso Target问题
-keywords: Picasso
+title: Kotlin初探，空安全
+categories: Kotlin
+description: Kotlin空安全
+keywords: Kotlin
 ---
 
 ## 一，var val区别 
